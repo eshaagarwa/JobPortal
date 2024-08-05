@@ -125,6 +125,21 @@
         navLinks.classList.toggle('active');
         authLinks.classList.toggle('active');
     });
+    const testimonialsSlider =document,querySelector('testimonial-slider');
+    let scrollAmmount = 0;
+
+    function autoscroll(){
+        scrollAmmount += 310;
+        if(scrollAmmount >= testimonialsSlider.scrollWidth -testimonialsSlider.clientWidth){
+            scrollAmmount = 0;
+        }
+        testimonialsSlider.scrollTo({
+            top:0;
+            left:scrollAmmount,
+            bheavior:'smooth'
+        })
+    }
+    setInterval(autoscroll,3000);
 </script>
 
 </body>
