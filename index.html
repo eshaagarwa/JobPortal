@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<header>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="Logo"> <!-- Reference to the image file -->
+        </div>
+        
+        
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Jobs</a>
+            <a href="#">About Us</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <div class="auth-links">
+            <a href="#">Login</a>
+            <button class="register-btn">Register</button>
+        </div>
+        <div class="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+</header>
+
+<div class="hero">
+    <div class="overlay"></div>
+    <h1>Find Your Dream Job Today!</h1>
+    <p>Connecting Talent with Opportunity: Your Gateway to Career Success</p>
+    <div class="search-container">
+        <input type="text" placeholder="Job Title or Company">
+        <select>
+            <option>Select Location</option>
+        </select>
+        <select>
+            <option>Select Category</option>
+        </select>
+        <button>Search Job</button>
+    </div>
+    <div class="stats">
+        <div>
+            <img src="company.png" alt="Jobs Icon" class="icon">
+            <div class="stat-item">
+                <h3 class="stat-number">25,850</h3>
+                <h3>Jobs</h3>
+            </div>
+        </div>
+        <div>
+            <img src="candidate.png" alt="Candidates Icon" class="icon">
+            <div class="stat-item">
+                <h3>10,250</h3>
+                <h3>Candidates</h3>
+            </div>
+        </div>
+        <div>
+            <img src="building.png" alt="Companies Icon" class="icon">
+            
+            <div class="stat-item">
+                <h3>11,400</h3>
+                <h3>Companies</h3>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--div class="sponsors">
+    <img src="1.png" alt="Spotify">
+    <img src="2.png" alt="Slack">
+    <img src="3.png" alt="Adobe">
+    <img src="4.png" alt="Asana">
+    <img src="5.png" alt="Linear">
+</div-->
+
+<div class="sponsors">
+    <img src="1.png" alt="Spotify" style="width: 120px; height: 120px; margin:10px; ">
+    <img src="2.png" alt="Slack" style="width: 120px; height: 120px;margin:10px;">
+    <img src="3.png" alt="Adobe" style="width: 120px; height: 120px;margin:10p;">
+    <img src="4.png" alt="Asana" style="width: 120px; height: 120px;margin:10px;">
+    <img src="5.png" alt="Linear" style="width: 120px; height: 120px;margin:10px;">
+</div>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+    const authLinks = document.querySelector('.auth-links');
+
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
+        authLinks.classList.toggle('active');
+    });
+</script>
+
+</body>
+</html>

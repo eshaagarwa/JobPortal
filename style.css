@@ -1,0 +1,259 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
+}
+
+header {
+    color: rgb(249, 249, 249);
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+header .logo img {
+    height: 50px; /* Adjust the height as needed */
+}
+
+header .nav-links,
+header .auth-links {
+    display: flex;
+    gap: 20px;
+}
+
+header .nav-links a,
+header .auth-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+header .menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: white;
+}
+
+/* Register button specific styles */
+.register-btn {
+    background-color: #0bb5d7; /* Change the background color */
+    color: white; /* Change the text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px 20px; /* Adjust padding to your preference */
+    font-size: 1em; /* Adjust font size to your preference */
+    transition: background-color 0.3s ease; /* Add transition for a smooth hover effect */
+}
+
+.register-btn:hover {
+    background-color: #45a049; /* Change the background color on hover */
+}
+
+.hero {
+    position: relative;
+    background-image: url('home.jpg'); /* Replace with your image URL */
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding-top: 80px;
+    overflow: hidden;
+}
+
+.hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Adjust opacity as needed */
+    z-index: 1;
+}
+
+.hero h1, .hero p, .search-container, .stats {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container input,
+.search-container select,
+.search-container button,
+.search-container .job-title {
+    padding: 10px;
+    margin: 5px;
+    font-size: 1em;
+    width: auto; /* Change width to auto to fit inline */
+    max-width: none; /* Remove max-width */
+}
+
+.search-container input,
+.search-container select,
+.search-container .job-title {
+    border: none;
+    border-radius: 5px;
+}
+
+.search-container button {
+    background-color: #188cb6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    flex-wrap: wrap;
+}
+
+.stats div {
+    margin: 10px 15px;
+    text-align: center;
+    color: white;
+}
+
+.stats .icon {
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+/* Styles for the stat-container */
+.stat-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: white;
+    margin: 10px 15px;
+}
+
+.stat-container .icon {
+    height: 40px; /* Increase the size of the icon */
+    margin-right: 10px; /* Space between icon and number */
+}
+
+.stat-container .stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-container .stat-number {
+    font-size: 1.5em; /* Adjust size as needed */
+}
+
+.sponsors {
+    background-color: #000;
+    padding: 20px 0; /* Decrease the padding to reduce height */
+    text-align: center;
+}
+
+.sponsors img {
+    margin: 0 15px; /* Reduce margin between images */
+    height: 50px; /* Adjust the height as needed */
+    display: inline-block;
+    vertical-align: middle;
+    filter: brightness(0) invert(1); /* This will make logos white if they are black */
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2em;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+    }
+
+    .search-container input,
+    .search-container select,
+    .search-container button {
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header .nav-links,
+    header .auth-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    header .nav-links.active,
+    header .auth-links.active {
+        display: flex;
+    }
+
+    header .menu-toggle {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 1.5em;
+    }
+
+    .hero p {
+        font-size: 1em;
+    }
+
+    .search-container input,
+    .search-container select,
+    .search-container button {
+        max-width: 100px;
+    }
+
+    .stats .icon {
+        height: 20px;
+    }
+}
